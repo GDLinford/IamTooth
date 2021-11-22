@@ -1,0 +1,22 @@
+﻿{
+  "BackgroundImageAbsolutePath": "C:\\Users\\georg\\OneDrive\\Desktop\\Desktop Folders\\Clip Studio stuff\\What the hell is this.png",
+  "BackgroundImagesDirectoryAbsolutePath": "C:\\USERS\\GEORG\\APPDATA\\LOCAL\\MICROSOFT\\VISUALSTUDIO\\16.0_1470CB5D\\EXTENSIONS\\R5ZFTGF0.J0M\\Images",
+  "ExpandToIDE": false,
+  "Extensions": ".png, .jpg, .gif, .bmp",
+  "ImageBackgroundType": 0,
+  "ImageFadeAnimationInterval": "PT0S",
+  "ImageStretch": 0,
+  "IsLimitToMainlyEditorWindow": false,
+  "LoopSlideshow": true,
+  "MaxHeight": 0,
+  "MaxWidth": 0,
+  "Opacity": 0.35,
+  "PositionHorizon": 0,
+  "PositionVertical": 1,
+  "ShuffleSlideshow": false,
+  "SoftEdgeX": 0,
+  "SoftEdgeY": 0,
+  "UpdateImageInterval": "PT1M",
+  "ViewBoxPointX": 0,
+  "ViewBoxPointY": 0
+}
