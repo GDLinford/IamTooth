@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Climb : MonoBehaviour
 {
-    public Transform exit;
+    [SerializeField] private GameObject exit;
 
     // Start is called before the first frame update
     void Start()
@@ -16,5 +16,14 @@ public class Climb : MonoBehaviour
     void Update()
     {
         
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag != "Player")
+        {
+            Debug.Log("Bugger off");
+            return;
+        }
+        collision.gameObject.transform.position = exit.transform.position;
     }
 }

@@ -15,7 +15,7 @@ public class UIManager : MonoBehaviour
     public float SoF = 2f;
 
     public Slider Hslider;
-    public TMP_Text HText, TText;
+    public TMP_Text HText, TText, starTexts;
 
     public GameObject PScreen;
 

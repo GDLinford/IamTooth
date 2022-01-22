@@ -19,9 +19,14 @@ public class Manager : MonoBehaviour
 
     public Vector3 respawnPoint;
 
+    public int curStars;
+
     void Awake()
     {
         SInstance = this;
+        curStars = PlayerPrefs.GetInt("Stars");
+
+        
     }
 
     // Start is called before the first frame update
@@ -29,7 +34,9 @@ public class Manager : MonoBehaviour
     {
         player = FindObjectOfType<PlayerController>();
 
-        respawnPoint = player.transform.position + Vector3.up;   
+        respawnPoint = player.transform.position + Vector3.up;
+
+        UIManager.UInstance.starTexts.text = curStars.ToString();
     }
 
     public void RespawnPlayer()
@@ -69,6 +76,15 @@ public class Manager : MonoBehaviour
 
         //set our health back to full
         HeathManager.HInstance.HealthSet();
+    }
+
+    public void StarGot()
+    {
+        curStars++;
+        UIManager.UInstance.starTexts.text = curStars.ToString();
+
+        //save our value of stars between levels
+        PlayerPrefs.SetInt("Stars", curStars);
     }
 
 }

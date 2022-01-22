@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Climbable
+  - Ice
+  - Water
+  - KillBox
+  - Shelf
+  - ToyBox
+  - Book
   layers:
   - Default
   - TransparentFX

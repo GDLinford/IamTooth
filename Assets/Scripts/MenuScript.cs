@@ -9,11 +9,22 @@ public class MenuScript : MonoBehaviour
     {
         PlayerPrefs.DeleteAll();
 
-        SceneManager.LoadScene("Bathroom");
+        SceneManager.LoadScene("Plot");
+    }
+
+    public void ReplayGame()
+    {
+        //this will let you keep stars
+        SceneManager.LoadScene("Plot");
     }
 
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void NextLevel()
+    {
+        SceneManager.LoadScene("Bathroom");
     }
 }

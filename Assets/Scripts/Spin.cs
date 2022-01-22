@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Spin : MonoBehaviour
 {
-    AudioSource Source;
-    public float speed;
+    public AudioSource Source;
+    public float speed, timer;
+    private bool collided;
 
     private void Start()
     {
@@ -16,14 +17,27 @@ public class Spin : MonoBehaviour
     void Update()
     {
         transform.Rotate(0, speed, 0);
+
+        if(collided == true)
+        {
+            timer -= Time.deltaTime;
+        }
+
+        if (timer <= 0)
+        {
+            Destroy(gameObject);
+            timer = 0.3f;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Source.Play(0);
-            this.gameObject.SetActive(false);
+            collided = true;
+            Source.Play();
+            Manager.SInstance.StarGot();
+            
         }
     }
 }
