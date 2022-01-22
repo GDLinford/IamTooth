@@ -10,9 +10,9 @@ public class DeathZone : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
-        {
-            //other.gameObject.GetComponent<CharacterController>().Move(new Vector3(19, 4.6f, -46) - other.transform.position);
+        { 
             Manager.SInstance.RespawnPlayer();
+            //play the splash sound
             splash.Play();
 
         }

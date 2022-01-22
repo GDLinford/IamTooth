@@ -25,6 +25,7 @@ public class FlightPatrol : MonoBehaviour
     {
         float moveStep = MoveSpeed * Time.deltaTime;
 
+        
         float distance = Vector3.Distance(transform.position, target.position);
         CheckDistance(distance);
 
@@ -33,6 +34,7 @@ public class FlightPatrol : MonoBehaviour
 
     void CheckDistance(float curDistance)
     {
+        //set our target to next waypoint in the list, then use ChangeTarget
         if(curDistance <= minDist)
         {
             TargetWaypointNumber++;

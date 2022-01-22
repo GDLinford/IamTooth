@@ -36,10 +36,6 @@ public class PlayerController : MonoBehaviour
         camera = FindObjectOfType<CameraController>();
 
         groundedLast = true;
-
-        //Mrenderer = GetComponent<MeshRenderer>();
-        //Mrenderer.enabled = true;
-        //Mrenderer.sharedMaterial = materials[0];
     }
 
     void FixedUpdate()
@@ -76,11 +72,13 @@ public class PlayerController : MonoBehaviour
             jumpParticle.SetActive(false);
         }
 
+        //if we are grounded our landing particle activates
         if(grounded && !groundedLast)
         {
             landingParticle.SetActive(true);
         }
 
+        //are we grounded and pressing Jump
         if (grounded && Input.GetButtonDown("Jump"))
         {
             grounded = false;

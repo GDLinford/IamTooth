@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AnimEvents : MonoBehaviour
 {
-    //this script is being made to store any animation event that need to happen
+    //this script is being made to store any animation event that needs to happen, primarily used for changing how some of the rooms look after an objective is complete.
 
     [SerializeField] private GameObject objToActivate, secondObjtoActivate, thirdObjtoActivate, ObjtoDeactivate;
 

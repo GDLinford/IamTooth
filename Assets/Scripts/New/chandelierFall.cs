@@ -6,23 +6,11 @@ public class chandelierFall : MonoBehaviour
 {
     [SerializeField] private GameObject chandelierToActivate, ChandelierToDeactivate;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            //when the player collides with this start playing the chandelier animation
             chandelierToActivate.SetActive(true);
             ChandelierToDeactivate.SetActive(false);
         }

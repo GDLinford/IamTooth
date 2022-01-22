@@ -25,6 +25,7 @@ public class HeathManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //reset our invuln timer when its at 0
         if(InvulnTimer > 0)
         {
             InvulnTimer -= Time.deltaTime;
@@ -42,6 +43,7 @@ public class HeathManager : MonoBehaviour
 
             curHealth = curHealth - 1;
 
+            //if our health is 0 respawn
             if (curHealth <= 0)
             {
                 Manager.SInstance.RespawnPlayer();

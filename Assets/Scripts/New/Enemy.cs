@@ -71,20 +71,27 @@ public class Enemy : MonoBehaviour
 
     void OnWalkEnter()
     {
+        //Enemy walk direction, imagine a sphere around the enemy its finding a point inside that
         Vector3 walkDirection = (Random.insideUnitSphere * 10f) + transform.position;
+        //that found point is our "navHit"
         NavMesh.SamplePosition(walkDirection, out NavMeshHit navHit, 3f, NavMesh.AllAreas);
+        //make our destination navHit
         Vector3 destination = navHit.position;
+        //set our destination
         agent.SetDestination(destination);
     }
 
     void Walk()
     {
+        //if we are nearby stop moving towards it, this just helps prevent it from bugging
         if(agent.remainingDistance <= 0.25f)
         {
+            //go back to Idle and clear our path
             agent.ResetPath();
             Brain.pushState(Idle, OnIdleEnter);
         }
 
+        //if the tooth is near jump into chase state
         if (toothNear)
         {
             Brain.pushState(Chase, null);
@@ -99,10 +106,12 @@ public class Enemy : MonoBehaviour
     void Attack()
     {
         AttackTimer -= Time.deltaTime;
+        //if we are nearby and the timer is 0 then take damage
         if(AttackTimer <= 0)
         {
             HeathManager.HInstance.TakeDamage();
         }
+        //if the distance between the enemy and player is too much then go back to idle
         if(Vector3.Distance(transform.position, tooth.transform.position) > 0.5f)
         {
             canAttack = false;

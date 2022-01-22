@@ -7,6 +7,7 @@ public class MenuScript : MonoBehaviour
 {
     public void PlayGame()
     {
+        //delete all the stars collected
         PlayerPrefs.DeleteAll();
 
         SceneManager.LoadScene("Plot");
@@ -20,6 +21,7 @@ public class MenuScript : MonoBehaviour
 
     public void QuitGame()
     {
+        //completely quit the game
         Application.Quit();
     }
 

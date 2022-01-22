@@ -45,12 +45,13 @@ public class UIManager : MonoBehaviour
             RespawnScreen.color = new Color(0, 0, 0, Mathf.MoveTowards(RespawnScreen.color.a, 0f, SoF * Time.deltaTime));
         }
 
+        //Pause the game when you press P
         if (Input.GetKeyDown(KeyCode.P))
         {
             PScreenFunctionality();
         }
     }
-
+    //the two fade voids for the respawn screen
     public void FadeOut()
     {
         fadingOut = true;
@@ -65,15 +66,13 @@ public class UIManager : MonoBehaviour
 
     public void HealthUpdate()
     {
-        //HText.text = "Health: " + HeathManager.HInstance.curHealth + "/" + HeathManager.HInstance.MaxHealth;
-
         Hslider.maxValue = HeathManager.HInstance.MaxHealth;
         Hslider.value = HeathManager.HInstance.curHealth;
     }
 
     public void PScreenFunctionality()
     {
-
+        //lock our cursor and pause time when the pause screen is up
         if(PScreen.activeInHierarchy == true)
         {
             Cursor.lockState = CursorLockMode.Locked;

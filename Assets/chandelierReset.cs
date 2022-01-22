@@ -6,20 +6,9 @@ public class chandelierReset : MonoBehaviour
 {
     [SerializeField] private GameObject Chandelier1;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void ChandelierIncasePlayerFallsOff()
     {
+        //this is just made so if the player falls off then the chandelier will come back down
         Chandelier1.SetActive(true);
         this.gameObject.SetActive(false);
     }

@@ -17,6 +17,7 @@ public class Checkpoint : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            //if we trigger a checkpoint set it to be our respawn point
             if(Manager.SInstance.respawnPoint != ActivePoint.transform.position)
             {
                 Manager.SInstance.respawnPoint = ActivePoint.transform.position;

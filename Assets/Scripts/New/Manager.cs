@@ -25,8 +25,6 @@ public class Manager : MonoBehaviour
     {
         SInstance = this;
         curStars = PlayerPrefs.GetInt("Stars");
-
-        
     }
 
     // Start is called before the first frame update
@@ -34,8 +32,10 @@ public class Manager : MonoBehaviour
     {
         player = FindObjectOfType<PlayerController>();
 
+        //our respawn point for when we start the game
         respawnPoint = player.transform.position + Vector3.up;
 
+        //reference to our UI manager for out star count
         UIManager.UInstance.starTexts.text = curStars.ToString();
     }
 
@@ -54,6 +54,7 @@ public class Manager : MonoBehaviour
     private void Update()
     {
         TimerNum += Time.deltaTime;
+        //"f2" put the text to two decimal places so it works like this 10.21 as opposed to 10.21464343
         UIManager.UInstance.TText.text = TimerNum.ToString("f2");
     }
 
@@ -62,9 +63,8 @@ public class Manager : MonoBehaviour
         //by setting it too false we dont need to worry about using the characterCOntroller component to move
         player.gameObject.SetActive(false);
 
-        //fade screen to black
+        //fade screen to black and wait for the respawn timer
         UIManager.UInstance.FadeOut();
-
         yield return new WaitForSeconds(RespawnDelay);
 
         //move the player to the current respawn point then set it active again
@@ -80,6 +80,7 @@ public class Manager : MonoBehaviour
 
     public void StarGot()
     {
+        //increase and display our current number of stars
         curStars++;
         UIManager.UInstance.starTexts.text = curStars.ToString();
 

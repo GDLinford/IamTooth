@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ToysAway : MonoBehaviour
 {
+    //the toy care the player pushes
     [SerializeField] private GameObject toyToActivate;
 
     private void OnTriggerEnter(Collider other)
