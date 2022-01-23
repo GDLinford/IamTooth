@@ -15,19 +15,14 @@ public class UIManager : MonoBehaviour
     public float SoF = 2f;
 
     public Slider Hslider;
+    //HText = Health Text, TText = Timer Text
     public TMP_Text HText, TText, starTexts;
-
+    //Pause Screen
     public GameObject PScreen;
 
     private void Awake()
     {
         UInstance = this;
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
     }
 
     // Update is called once per frame

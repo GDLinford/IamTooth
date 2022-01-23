@@ -6,9 +6,6 @@ public class PlayerController : MonoBehaviour
 {
     public static PlayerController PCInstance;
 
-    //public Material[] materials;
-    //[HideInInspector] public MeshRenderer Mrenderer;
-
     public float speed;
     //jump and gravity
     public float JSpeed, gravityScale;
@@ -16,8 +13,6 @@ public class PlayerController : MonoBehaviour
     private float yValue;
 
     public CharacterController charController;
-
-    public Animator anim;
 
     //Camera
     [HideInInspector] public CameraController camera;

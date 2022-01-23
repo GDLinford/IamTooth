@@ -202,6 +202,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RubberDuckMoving
       objectReference: {fileID: 0}
+    - target: {fileID: 2158692760828971799, guid: 23f18943820f0c84da09b19f757090c9, type: 3}
+      propertyPath: m_TagString
+      value: Duck
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23f18943820f0c84da09b19f757090c9, type: 3}
 --- !u!1 &6028453
@@ -803,7 +807,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh224990
+  m_Name: pb_Mesh37510
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -24126,7 +24130,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh225078
+  m_Name: pb_Mesh37600
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -24350,6 +24354,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 79200972fc3bf044ea9e4b9d0b5253c6, type: 3}
       propertyPath: m_Name
       value: RubberDuck (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 79200972fc3bf044ea9e4b9d0b5253c6, type: 3}
+      propertyPath: m_TagString
+      value: Duck
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79200972fc3bf044ea9e4b9d0b5253c6, type: 3}
@@ -35171,7 +35179,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh226580
+  m_Name: pb_Mesh39134
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -45624,7 +45632,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh225482
+  m_Name: pb_Mesh38014
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

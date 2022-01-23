@@ -31,14 +31,14 @@ public class Platform : MonoBehaviour
     {
         //when we get to the end of one of the points rotate the model and go the other way
 
-        if((Vector3.Distance(transform.position, endpoint.position) <= 0.01) && goingForward)
+        if((Vector3.Distance(transform.position, endpoint.position) <= 0.01) && goingForward && gameObject.CompareTag("Duck"))
         { 
             transform.Rotate(0, 180, 0);
             goingForward = false;
             goingBack = true;
         }
 
-        if((Vector3.Distance(transform.position, startPoint.position) <= 0.01) && goingBack)
+        if((Vector3.Distance(transform.position, startPoint.position) <= 0.01) && goingBack && gameObject.CompareTag("Duck"))
         {
             transform.Rotate(0, 180, 0);
             goingBack = false;
